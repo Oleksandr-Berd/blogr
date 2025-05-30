@@ -1,6 +1,7 @@
 import * as SC from "./MenuStyled";
 
 import arrowDown from "../../assets/images/icon-arrow-dark.svg";
+import arrowUp from "../../assets/images/arrowUp.png"
 import AuthCon from "../AuthCon/AuthCon";
 
 const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
@@ -16,7 +17,7 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <h4>Product</h4>
             {location === "header" ? (
               <button type="button" onClick={handleClick}>
-                <img src={arrowDown} alt="toggle_subMenu" />
+                <img src={isSubMenuOpen ? arrowUp : arrowDown} alt="toggle_subMenu" />
               </button>
             ) : null}
           </SC.SubMenuCon>
@@ -44,7 +45,7 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <h4>Company</h4>
             {location === "header" ? (
               <button type="button" onClick={handleClick}>
-                <img src={arrowDown} alt="toggle_subMenu" />
+                <img src={isSubMenuOpen ? arrowUp : arrowDown} alt="toggle_subMenu" />
               </button>
             ) : null}
           </SC.SubMenuCon>
@@ -71,7 +72,7 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <h4>Connect</h4>
             {location === "header" ? (
               <button type="button" onClick={handleClick}>
-                <img src={arrowDown} alt="toggle_subMenu" />
+                <img src={isSubMenuOpen ? arrowUp : arrowDown} alt="toggle_subMenu" />
               </button>
             ) : null}
           </SC.SubMenuCon>
