@@ -44,7 +44,7 @@ export const NavCon = styled.nav`
     }
   }
 
-  &.header {
+  &.header, &.headerDesk {
     display: inline-block;
 
     min-width: 324px;
