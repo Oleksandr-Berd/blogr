@@ -5,7 +5,7 @@ import upIcon from "../../assets/images/arrowUp.png";
 import NavDeskItem from "./NavDeskItem";
 const NavDeskMenu = ({ id, title, isUnits, handleUnits, units, unitId }) => {
   return (
-    <SC.NavListStyled>
+    <SC.NavListStyled className={isUnits && String(id) === unitId ? "active" : null}>
       <SC.NavUnitStyled>
         <div id={id}>
           <button type="button" onClick={handleUnits}>

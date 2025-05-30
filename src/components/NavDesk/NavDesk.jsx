@@ -17,7 +17,7 @@ const NavDesk = () => {
 
 
   return (
-    <SC.NavStyled>
+    <SC.NavStyled onClick = {isUnits ? handleUnits : null}>
       {navDb.map(({ title, units, id }) => {
         return (
           <NavDeskMenu handleUnits={handleUnits} title={title} units={units} id={id} isUnits={isUnits} key={id} unitId={unitId}/>

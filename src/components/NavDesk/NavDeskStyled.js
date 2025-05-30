@@ -9,7 +9,11 @@ export const NavStyled = styled.nav`
   color: #fff;
 
   & button {
+
     opacity: 0.5;
+
+    font-family: "Ubuntu";
+    font-weight: 700;
 
     color: inherit;
     background-color: transparent;
@@ -27,17 +31,24 @@ export const NavStyled = styled.nav`
   }
 `;
 
-export const NavListStyled =styled.ul`
- &:not(:last-child) {
+export const NavListStyled = styled.ul`
+  &:not(:last-child) {
     margin-right: 32px;
   }
-`
+`;
 
 export const NavUnitStyled = styled.li`
   position: relative;
 `;
 
 export const NavItemsListStyled = styled.ul`
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  transform: translate(-25%, 36px);
+
   padding: 24px;
 
   font-size: "Ubuntu";
@@ -46,6 +57,8 @@ export const NavItemsListStyled = styled.ul`
 
   color: #2d2e40;
   background-color: #fff;
+
+  border-radius: 8px;
 
   & > li {
     transition: all 0.3s;

@@ -15,6 +15,8 @@ export const CustomHeader = styled.div`
 
   border-bottom-left-radius: 25%;
 
+  
+
   & > div:first-of-type {
     display: flex;
     flex-direction: row;
@@ -22,6 +24,10 @@ export const CustomHeader = styled.div`
     align-items: center;
 
     margin-bottom: 108px;
+
+   @media (min-width: 1280px) {
+  justify-content: flex-start;
+}
   }
 
   & > img {

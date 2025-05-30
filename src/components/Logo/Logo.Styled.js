@@ -9,4 +9,8 @@ export const LogoCustom = styled.div`
       margin-right: auto;
     }
   }
+
+  @media (min-width: 1280px){
+    margin-right: 64px;
+  }
 `;
