@@ -1,15 +1,14 @@
 import * as SC from "./MenuStyled";
 
 import arrowDown from "../../assets/images/icon-arrow-dark.svg";
-import arrowUp from "../../assets/images/arrowUp.png"
+import arrowUp from "../../assets/images/arrowUp.png";
 import AuthCon from "../AuthCon/AuthCon";
 
 const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
-
   return (
     <SC.Overlay className={location}>
       <SC.NavCon className={location && location}>
-        <div>
+        <SC.ItemConDesk>
           <SC.SubMenuCon
             className={location === "header" ? "header" : null}
             id="1"
@@ -17,7 +16,10 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <h4>Product</h4>
             {location === "header" ? (
               <button type="button" onClick={handleClick}>
-                <img src={isSubMenuOpen ? arrowUp : arrowDown} alt="toggle_subMenu" />
+                <img
+                  src={isSubMenuOpen ? arrowUp : arrowDown}
+                  alt="toggle_subMenu"
+                />
               </button>
             ) : null}
           </SC.SubMenuCon>
@@ -36,8 +38,8 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <li>Features</li>
             <li>Integrations</li>
           </ul>
-        </div>
-        <div>
+        </SC.ItemConDesk>
+        <SC.ItemConDesk>
           <SC.SubMenuCon
             className={location === "header" ? "header" : null}
             id="2"
@@ -45,7 +47,10 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <h4>Company</h4>
             {location === "header" ? (
               <button type="button" onClick={handleClick}>
-                <img src={isSubMenuOpen ? arrowUp : arrowDown} alt="toggle_subMenu" />
+                <img
+                  src={isSubMenuOpen ? arrowUp : arrowDown}
+                  alt="toggle_subMenu"
+                />
               </button>
             ) : null}
           </SC.SubMenuCon>
@@ -63,8 +68,8 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <li>Blog</li>
             <li>Careers</li>
           </ul>
-        </div>
-        <div>
+        </SC.ItemConDesk>
+        <SC.ItemConDesk>
           <SC.SubMenuCon
             className={location === "header" ? "header" : null}
             id="3"
@@ -72,7 +77,10 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <h4>Connect</h4>
             {location === "header" ? (
               <button type="button" onClick={handleClick}>
-                <img src={isSubMenuOpen ? arrowUp : arrowDown} alt="toggle_subMenu" />
+                <img
+                  src={isSubMenuOpen ? arrowUp : arrowDown}
+                  alt="toggle_subMenu"
+                />
               </button>
             ) : null}
           </SC.SubMenuCon>
@@ -89,8 +97,8 @@ const Menu = ({ location, handleClick, isSubMenuOpen, activeSubMenu }) => {
             <li>Newsletter</li>
             <li>LinkedIn</li>
           </ul>
-        </div>
-        <AuthCon/>
+        </SC.ItemConDesk>
+        {location === "header" ? <AuthCon /> : null}
       </SC.NavCon>
     </SC.Overlay>
   );

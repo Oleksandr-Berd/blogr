@@ -17,7 +17,34 @@ export const Overlay = styled.div`
   }
 `;
 
+export const ItemConDesk = styled.div`
+  @media (min-width: 1280px) {
+    margin-right: 160px;
+
+    & li {
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 1px solid #fff;
+
+        cursor: pointer;
+
+        transition: all 0.3s;
+      }
+    }
+  }
+`;
+
 export const NavCon = styled.nav`
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   &.footer {
     color: #fff;
 
@@ -44,7 +71,8 @@ export const NavCon = styled.nav`
     }
   }
 
-  &.header, &.headerDesk {
+  &.header,
+  &.headerDesk {
     display: inline-block;
 
     min-width: 324px;

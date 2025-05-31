@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 import bgCircleMob from "../../assets/images/bgCircle.png";
-import bgCircleDesk from "../../assets/images/bg-pattern-circles.svg"
 
 export const StateConCustom = styled.div`
   position: relative;
