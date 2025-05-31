@@ -8,6 +8,15 @@ export const DesignCon = styled.div`
 
   text-align: center;
 
+  overflow: hidden;
+
+  @media (min-width: 1280px) {
+    padding-top: 150px;
+    padding-bottom: 262px;
+    padding-left: 165px;
+    padding-right: 0;
+  }
+
   & > h3 {
     margin-bottom: 38px;
 
@@ -16,6 +25,20 @@ export const DesignCon = styled.div`
     letter-spacing: -0.84px;
 
     color: #1f3e5a;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 92px;
+
+      font-size: 40px;
+    }
+  }
+`;
+
+export const ContentCon = styled.div`
+  @media (min-width: 1280px) {
+    position: relative;
+
+    text-align: left;
   }
 `;
 
@@ -23,11 +46,39 @@ export const Thumb = styled.div`
   width: 326px;
   height: 326px;
 
+  @media (min-width: 1280px) {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transform: translate(72%, -24%);
+
+    width: 885px;
+    height: 882px;
+
+    & > img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+`;
+
+export const ArticleCon = styled.div`
+  @media (min-width: 1280px) {
+    display: inline-block;
+
+    width: 540px;
+  }
 `;
 
 export const Article = styled.div`
   &:not(:last-of-type) {
     margin-bottom: 40px;
+
+    @media (min-width: 1280px){
+      margin-bottom: 64px;
+    }
   }
 
   & > h4 {
@@ -38,10 +89,15 @@ export const Article = styled.div`
     font-size: 28px;
 
     color: #1f3e5a;
+
+    @media (min-width: 1280px){
+      line-height: 1;
+    }
   }
 
   & > p {
     font-size: 16px;
+    font-weight: 300;
     line-height: 1.75;
     letter-spacing: 0.5px;
 

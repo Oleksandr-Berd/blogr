@@ -26,6 +26,10 @@ export const StateConCustom = styled.div`
     left: 50%;
 
     transform: translate(-50%, -125%);
+
+    @media (min-width: 1280px){
+      transform: translate(0, 0);
+    }
   }
 
   & > h3 {
