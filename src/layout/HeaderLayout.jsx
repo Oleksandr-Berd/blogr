@@ -11,17 +11,19 @@ import MenuModal from "../components/Portal/MenuModal";
 import { useScreenSize } from "../hooks/useScreenSize";
 import Menu from "../components/Menu/Menu";
 import NavDesk from "../components/NavDesk/NavDesk";
+import AuthCon from "../components/AuthCon/AuthCon";
 
 const Header = () => {
 
   const { isShare, toggleShare } = useToggle();
 
-  const { isMixMobileTable } = useScreenSize();
+  const { isMixMobileTable, isDesktop } = useScreenSize();
 
 
   return (
     <SC.CustomHeader>
-      <div>
+      <SC.LogoAuthNavCon>
+      <SC.NacCon>
         <Logo />
         {isMixMobileTable ? (
           <SC.MenuCustom type="button" onClick={toggleShare}>
@@ -31,7 +33,9 @@ const Header = () => {
           <NavDesk/>
         )}
         {isShare ? <MenuModal location="header" isShare={isShare} /> : null}
-      </div>
+      </SC.NacCon>
+      {isDesktop ? <AuthCon/> : null}
+      </SC.LogoAuthNavCon>
       <Intro />
     </SC.CustomHeader>
   );

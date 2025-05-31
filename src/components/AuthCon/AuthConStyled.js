@@ -11,6 +11,17 @@ export const AuthConCustom = styled.div`
 
   border-top: 1px solid #dcdcdc;
 
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+  }
+
   & button:first-of-type {
     margin-bottom: 24px;
 
@@ -21,6 +32,11 @@ export const AuthConCustom = styled.div`
     color: #1f3e5a;
 
     border: none;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
   }
 
   & button:last-of-type {

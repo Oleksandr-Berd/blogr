@@ -9,6 +9,10 @@ export const NavStyled = styled.nav`
   color: #fff;
 
   & button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 
     opacity: 0.5;
 
@@ -27,6 +31,12 @@ export const NavStyled = styled.nav`
 
       border-bottom: 1px solid #fff;
       transition: all 0.3s;
+    }
+
+    & > img {
+      margin-left: 8px;
+
+      filter: brightness(0) invert(1);
     }
   }
 `;
