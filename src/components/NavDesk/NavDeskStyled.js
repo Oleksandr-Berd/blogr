@@ -30,6 +30,9 @@ export const NavStyled = styled.nav`
       opacity: 1;
 
       border-bottom: 1px solid #fff;
+
+      cursor: pointer;
+
       transition: all 0.3s;
     }
 
@@ -59,7 +62,15 @@ export const NavItemsListStyled = styled.ul`
 
   transform: translate(-25%, 36px);
 
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  width: 200px;
+  
   padding: 24px;
+
+  text-align: left;
 
   font-size: "Ubuntu";
   line-height: 2.2;
@@ -71,12 +82,18 @@ export const NavItemsListStyled = styled.ul`
   border-radius: 8px;
 
   & > li {
+    display: inline-block;
+
     transition: all 0.3s;
+
+    font-size: 15px;
+    line-height: 2.2;
 
     &:hover,
     &:active,
     &:focus {
       font-weight: 700;
+      cursor: pointer;
 
       transition: all 0.3s;
     }

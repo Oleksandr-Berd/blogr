@@ -36,6 +36,12 @@ export const AuthConCustom = styled.div`
     @media (min-width: 1280px) {
       margin-bottom: 0;
       margin-right: 32px;
+
+      &:hover,
+      &:active,
+      &:focus {
+        cursor: pointer;
+      }
     }
   }
 
@@ -52,5 +58,22 @@ export const AuthConCustom = styled.div`
     color: #fff;
 
     border-radius: 16px;
+
+    @media (min-width: 1280px) {
+      background-color: #fff;
+      color: #ff505c;
+
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: rgba(255, 123, 134, 1);
+        color: #fff;
+        cursor: pointer;
+
+        transition: background-color 0.3s, color 0.3s;
+      }
+    }
   }
 `;
